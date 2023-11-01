@@ -9,6 +9,29 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
+    <header>
+        <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm bg-light">
+
+      <div class="container-fluid">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="AutoSelection.aspx">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Administrator.aspx">Administrator</a>
+          </li>
+         
+          
+        </ul>
+      </div>
+
+    </nav>
+</header>
+
+
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
