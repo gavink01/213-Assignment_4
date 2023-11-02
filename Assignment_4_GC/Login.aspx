@@ -123,10 +123,10 @@
                             <asp:Label ID="Label3" runat="server" Text="UserName:"></asp:Label>
                         </td>
                         <td class="auto-style18">
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="UserNameTextBox" runat="server"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Enter UserName" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserNameTextBox" ErrorMessage="Enter UserName" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -141,10 +141,10 @@
                             <asp:Label ID="Label5" runat="server" Text="Password:"></asp:Label>
                         </td>
                         <td class="auto-style18">
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="PasswordTextBox" runat="server"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="EnterPassword" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PasswordTextBox" ErrorMessage="EnterPassword" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -157,9 +157,11 @@
                         <td class="auto-style23">&nbsp;</td>
                         <td class="auto-style15">&nbsp;</td>
                         <td class="auto-style18">
-                            <asp:Button ID="LoginButton" runat="server" Text="Login" Width="179px" />
+                            <asp:Button ID="LoginButton" runat="server" Text="Login" Width="179px" OnClick="LoginButton_Click" />
                         </td>
-                        <td>&nbsp;</td>
+                        <td>
+                            <asp:Label ID="Label6" runat="server"></asp:Label>
+                        </td>
                     </tr>
                 </table>
             </td>
@@ -167,7 +169,7 @@
         </tr>
         <tr>
             <td class="auto-style7"></td>
-            <td class="auto-style10"></td>
+            <td class="auto-style10">&nbsp;</td>
             <td class="auto-style2"></td>
         </tr>
     </table>
