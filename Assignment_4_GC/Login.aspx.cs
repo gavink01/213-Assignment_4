@@ -24,14 +24,14 @@ namespace Assignment_4_GC
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             //access the dbml
-            KarateSchoolDataContext dbconNetUser = new KarateSchoolDataContext(connString);
+            dbcon = new KarateSchoolDataContext(connString);
 
                 
 
             //Query to match the UserName and Password with something from the NetUser tables
-            var selectedUser = (from NetUser1 in dbconNetUser.NetUsers
-                                where NetUser1.UserName == UserNameTextBox.Text && NetUser1.UserPassword == PasswordTextBox.Text
-                                select new { NetUser1.UserType, NetUser1.UserID }).SingleOrDefault();
+            var selectedUser = (from x in dbcon.NetUsers
+                                where x.UserName == UserNameTextBox.Text && x.UserPassword == PasswordTextBox.Text
+                                select x).First();
 
             //If password and username sont match, then show an error
             if (selectedUser == null)
@@ -43,10 +43,10 @@ namespace Assignment_4_GC
             {
                 //Takes the userType from the selectedUser and the userID from the selected user and set them to variables
                 string userType = selectedUser.UserType.ToString().ToLower();
-                string userID = selectedUser.UserID.ToString();
-
-                //Adds the user ID to the value 0, so we can grab data from the database after the webpage changes
-                Session.Add(userID, 0);
+                UserDetails.userID = selectedUser.UserID;
+                
+                //Adds the user ID, so we can grab data from the database after the webpage changes
+                Session.Add("UserID", UserDetails.userID);
 
                 //This determines which webpage the user will be taken to
                 switch (userType)
