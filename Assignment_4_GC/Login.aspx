@@ -27,15 +27,15 @@
     }
     .auto-style8 {
         height: 168px;
-        width: 867px;
+        width: 1025px;
     }
     .auto-style9 {
         height: 306px;
-        width: 867px;
+        width: 1025px;
     }
     .auto-style10 {
         height: 182px;
-        width: 867px;
+        width: 1025px;
     }
     .auto-style11 {
         width: 177px;
@@ -157,7 +157,7 @@
                         <td class="auto-style23">&nbsp;</td>
                         <td class="auto-style15">&nbsp;</td>
                         <td class="auto-style18">
-                            <asp:Button ID="Button1" runat="server" Text="Button" />
+                            <asp:Button ID="LoginButton" runat="server" Text="Login" Width="179px" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
