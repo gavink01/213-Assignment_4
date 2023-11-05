@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:GridView ID="GridView1" runat="server" BorderStyle="Solid" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <asp:GridView ID="GridView1" runat="server" BorderStyle="Solid" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
