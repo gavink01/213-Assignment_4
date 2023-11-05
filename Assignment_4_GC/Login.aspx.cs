@@ -14,8 +14,10 @@ namespace Assignment_4_GC
         //HOW WILL THE CONNECTION STRING WORK ON MULTIPLE COMPUTERS?
 
         //connection string
-        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\colin\\Desktop\\Assignment_4GC\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
-
+        //Collins conn
+        //string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\colin\\Desktop\\Assignment_4GC\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
+        // Gavins conn
+        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\gavin\\OneDrive - North Dakota University System\\Desktop\\Repo\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf\";Integrated Security=True;Connect Timeout=30";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -33,7 +35,7 @@ namespace Assignment_4_GC
                                 where x.UserName == UserNameTextBox.Text && x.UserPassword == PasswordTextBox.Text
                                 select x).First();
 
-            //If password and username sont match, then show an error
+            //If password and username dont match, then show an error
             if (selectedUser == null)
             {
                 //Show the error to the user
