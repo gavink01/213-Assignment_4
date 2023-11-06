@@ -199,6 +199,34 @@
             background-color: #99CCFF;
             width: 279px;
         }
+        .auto-style53 {
+            width: 100%;
+            height: 342px;
+        }
+        .auto-style54 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 71px;
+        }
+        .auto-style55 {
+            background-color: #99CCFF;
+            width: 311px;
+            height: 71px;
+        }
+        .auto-style56 {
+            background-color: #99CCFF;
+            width: 196px;
+            height: 71px;
+        }
+        .auto-style57 {
+            background-color: #99CCFF;
+            width: 293px;
+            height: 71px;
+        }
+        .auto-style58 {
+            height: 71px;
+            background-color: #99CCFF;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -388,7 +416,7 @@
                 </td>
             </tr>
         </table>
-        <table class="w-100">
+        <table class="auto-style53">
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">&nbsp;</td>
@@ -417,7 +445,7 @@
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">
-                    <asp:RadioButtonList ID="RadioButtonList2" runat="server">
+                    <asp:RadioButtonList ID="DeleteRadioButtonList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DeleteRadioButtonList_SelectedIndexChanged">
                         <asp:ListItem Selected="True">Member</asp:ListItem>
                         <asp:ListItem>Instructor</asp:ListItem>
                     </asp:RadioButtonList>
@@ -431,7 +459,7 @@
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="DeleteDropDownList" runat="server" OnSelectedIndexChanged="DeleteDropDownList_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style46">&nbsp;</td>
@@ -460,7 +488,7 @@
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">
-                    <asp:Button ID="DeleteBtn" runat="server" Text="Delete" Width="137px" />
+                    <asp:Button ID="DeleteBtn" runat="server" CausesValidation="False" OnClick="DeleteBtn_Click" Text="Delete" Width="137px" />
                 </td>
                 <td class="auto-style46">&nbsp;</td>
                 <td class="auto-style39">
@@ -468,15 +496,19 @@
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style15">
-                    <asp:Button ID="AssignBtn" runat="server" Text="Assign" Width="137px" />
+                    <asp:Button ID="AssignBtn" runat="server" CausesValidation="False" Text="Assign" Width="137px" />
                 </td>
             </tr>
             <tr>
-                <td class="auto-style35">&nbsp;</td>
-                <td class="auto-style34">&nbsp;</td>
-                <td class="auto-style46">&nbsp;</td>
-                <td class="auto-style39">&nbsp;</td>
-                <td class="auto-style15">&nbsp;</td>
+                <td class="auto-style54"></td>
+                <td class="auto-style55">
+                    <asp:Label ID="SuccessLabel" runat="server" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style56">
+                    <asp:Label ID="EELABEL" runat="server" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style57"></td>
+                <td class="auto-style58"></td>
             </tr>
         </table>
     </p>

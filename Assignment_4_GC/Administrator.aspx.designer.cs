@@ -303,13 +303,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// RadioButtonList2 control.
+        /// DeleteRadioButtonList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        protected global::System.Web.UI.WebControls.RadioButtonList DeleteRadioButtonList;
 
         /// <summary>
         /// Label14 control.
@@ -321,13 +321,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Label Label14;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// DeleteDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DeleteDropDownList;
 
         /// <summary>
         /// DropDownList2 control.
@@ -373,5 +373,23 @@ namespace Assignment_4_GC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button AssignBtn;
+
+        /// <summary>
+        /// SuccessLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SuccessLabel;
+
+        /// <summary>
+        /// EELABEL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EELABEL;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,7 @@ namespace Assignment_4_GC
         //Method for refreshing the data on the page
         public void refreshPage()
         {
+            //connection to the dbml
             dbcon = new KarateSchoolDataContext(connString);
 
             //query to display needed itmes in Members to the gridview
@@ -49,6 +51,41 @@ namespace Assignment_4_GC
 
 
 
+
+        }
+
+
+        public void refreshDeleteDropDown()
+        {
+            
+            if(DeleteRadioButtonList.SelectedValue == "Member")
+            {
+                // LINQ, this gets the Auto types for the drop down list
+                var result = from x in dbcon.Members select new { Name = x.MemberFirstName + " " + x.MemberLastName, x.Member_UserID };
+
+                //add the data to the drop down list and to the drop down list's data field
+                DeleteDropDownList.DataTextField = "Name";
+                DeleteDropDownList.DataValueField = "Member_UserID";
+
+                //show the results in the drop down list
+                DeleteDropDownList.DataSource = result;
+                DeleteDropDownList.DataBind();
+            }
+            else
+            {
+                // LINQ, this gets the Auto types for the drop down list
+                var result = from x in dbcon.Instructors select new { Name = x.InstructorFirstName + " " + x.InstructorLastName, x.InstructorID };
+
+                //add the data to the drop down list and to the drop down list's data field
+                DeleteDropDownList.DataTextField = "Name";
+                DeleteDropDownList.DataValueField = "InstructorID";
+
+                //show the results in the drop down list
+                DeleteDropDownList.DataSource = result;
+                DeleteDropDownList.DataBind();
+            }
+                
+            
         }
 
 
@@ -57,6 +94,14 @@ namespace Assignment_4_GC
         {
             //Gives the page data when loaded
             refreshPage();
+
+            if (!IsPostBack)
+            {
+                refreshDeleteDropDown();
+            }
+            
+
+            
         }
 
         //This just changes what the user sees based on if the user picks Member or Instructor
@@ -168,6 +213,9 @@ namespace Assignment_4_GC
 
                     //close connection
                     conn.Close();
+
+                    //refreshes data in dropdown
+                    refreshDeleteDropDown();
                 }
             }
             catch (SqlException ex)
@@ -189,5 +237,116 @@ namespace Assignment_4_GC
             refreshPage();
 
         }
+
+        protected void DeleteRadioButtonList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            refreshDeleteDropDown();
+        }
+
+        protected void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            SuccessLabel.Visible = true;
+            SuccessLabel.Text = "yo";
+            try
+            {
+                EELABEL.Text = DeleteDropDownList.SelectedItem + "   "   + DeleteDropDownList.SelectedValue;
+
+
+                //sql connection object
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+
+                    //query for deleting from NetUser
+                    string deleteQuery = "DELETE from NetUser WHERE UserID=" + DeleteDropDownList.SelectedValue + "";
+
+                    //second query for deleting any users in Section tabel
+                    string deleteQuery2; 
+
+                    //third delete query for Member or Instructor tabels
+                    string deleteQuery3;
+
+                    
+
+
+
+                    if (DeleteRadioButtonList.SelectedValue == "Member")
+                    {
+                        //delete user from Section tabel
+                        deleteQuery2 = "DELETE from Section WHERE Member_ID=" + DeleteDropDownList.SelectedValue + "";
+
+                        //delete user from Member tabel
+                        deleteQuery3 = "DELETE from Member WHERE Member_UserID=" + DeleteDropDownList.SelectedValue + "";
+
+
+                    }
+                    else
+                    {
+                        //delete user from Section tabel
+                        deleteQuery2 = "DELETE from Section WHERE Instructor_ID=" + DeleteDropDownList.SelectedValue + "";
+
+                        //delete user from Instructor tabel
+                        deleteQuery3 = "DELETE from Instructor WHERE InstructorID=" + DeleteDropDownList.SelectedValue + "";
+                    }
+
+
+                    try
+                    {
+                        //open connection
+                        conn.Open();
+
+                        //connect query
+                        SqlCommand sqlcom = new SqlCommand(deleteQuery, conn);
+                        SqlCommand sqlcom2 = new SqlCommand(deleteQuery2, conn);
+                        SqlCommand sqlcom3 = new SqlCommand(deleteQuery3, conn);
+
+                        //Show success lable and display "Success"
+                        SuccessLabel.Visible = true;
+                        SuccessLabel.Text = "Success";
+
+
+                        //execute the query
+                        sqlcom3.ExecuteNonQuery();
+                        sqlcom2.ExecuteNonQuery();
+                        sqlcom.ExecuteNonQuery();
+                        
+                        
+                    }
+                    catch (SqlException ex)
+                    {
+                        SuccessLabel.Visible = true;
+                        //display error message
+                        SuccessLabel.Text = (ex.Message);
+                    }
+
+                    //close connection
+                    conn.Close();
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                SuccessLabel.Visible = true;
+                //display error message
+                SuccessLabel.Text = ("Exception: " + ex.Message);
+            }
+
+            //EELABEL.Text = DeleteDropDownList.SelectedItem + "   "   + DeleteDropDownList.SelectedValue;
+
+            
+            
+            //refresh the data
+            refreshPage();
+            refreshDeleteDropDown();
+            
+        }
+
+        protected void DeleteDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
