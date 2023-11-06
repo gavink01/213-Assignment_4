@@ -11,7 +11,7 @@ namespace Assignment_4_GC
     {
         //connection string
         
-        //Collins conn
+        //Colins conn
         string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\colin\\Desktop\\Assignment_4GC\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
         
         // Gavins conn
