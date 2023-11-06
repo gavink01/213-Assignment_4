@@ -122,11 +122,11 @@
         .auto-style33 {
             height: 76px;
             background-color: #99CCFF;
-            width: 311px;
+            width: 251px;
         }
         .auto-style34 {
             background-color: #99CCFF;
-            width: 311px;
+            width: 251px;
         }
         .auto-style35 {
             background-color: #99CCFF;
@@ -139,12 +139,12 @@
         }
         .auto-style39 {
             background-color: #99CCFF;
-            width: 293px;
+            width: 206px;
         }
         .auto-style40 {
             height: 76px;
             background-color: #99CCFF;
-            width: 293px;
+            width: 206px;
         }
         .auto-style41 {
             background-color: #99CCFF;
@@ -153,30 +153,16 @@
         }
         .auto-style42 {
             background-color: #99CCFF;
-            width: 311px;
+            width: 251px;
             height: 24px;
         }
         .auto-style44 {
             background-color: #99CCFF;
-            width: 293px;
+            width: 206px;
             height: 24px;
         }
         .auto-style45 {
             background-color: #99CCFF;
-            height: 24px;
-        }
-        .auto-style46 {
-            background-color: #99CCFF;
-            width: 196px;
-        }
-        .auto-style47 {
-            height: 76px;
-            background-color: #99CCFF;
-            width: 196px;
-        }
-        .auto-style48 {
-            background-color: #99CCFF;
-            width: 196px;
             height: 24px;
         }
         .auto-style49 {
@@ -203,29 +189,235 @@
             width: 100%;
             height: 342px;
         }
-        .auto-style54 {
+        .auto-style60 {
+            height: 76px;
+            background-color: #99CCFF;
+            width: 132px;
+        }
+        .auto-style61 {
+            background-color: #99CCFF;
+            width: 132px;
+            height: 24px;
+        }
+        .auto-style63 {
+            width: 132px;
+            background-color: #99CCFF;
+        }
+        .auto-style64 {
             background-color: #99CCFF;
             width: 146px;
-            height: 71px;
+            height: 45px;
         }
-        .auto-style55 {
+        .auto-style65 {
             background-color: #99CCFF;
-            width: 311px;
-            height: 71px;
+            width: 251px;
+            height: 45px;
         }
-        .auto-style56 {
+        .auto-style66 {
+            width: 132px;
             background-color: #99CCFF;
-            width: 196px;
-            height: 71px;
+            height: 45px;
         }
-        .auto-style57 {
+        .auto-style67 {
             background-color: #99CCFF;
-            width: 293px;
-            height: 71px;
+            width: 206px;
+            height: 45px;
         }
-        .auto-style58 {
-            height: 71px;
+        .auto-style69 {
             background-color: #99CCFF;
+            width: 146px;
+            height: 20px;
+        }
+        .auto-style70 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 20px;
+        }
+        .auto-style71 {
+            background-color: #99CCFF;
+            width: 132px;
+            height: 20px;
+        }
+        .auto-style72 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 20px;
+        }
+        .auto-style73 {
+            background-color: #99CCFF;
+            height: 20px;
+        }
+        .auto-style74 {
+            background-color: #99CCFF;
+            height: 45px;
+        }
+        .auto-style89 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 35px;
+        }
+        .auto-style90 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 35px;
+        }
+        .auto-style91 {
+            width: 132px;
+            background-color: #99CCFF;
+            height: 35px;
+        }
+        .auto-style92 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 35px;
+        }
+        .auto-style93 {
+            background-color: #99CCFF;
+            height: 35px;
+        }
+        .auto-style94 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 40px;
+        }
+        .auto-style95 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 40px;
+        }
+        .auto-style96 {
+            width: 132px;
+            background-color: #99CCFF;
+            height: 40px;
+        }
+        .auto-style97 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 40px;
+        }
+        .auto-style98 {
+            background-color: #99CCFF;
+            height: 40px;
+        }
+        .auto-style99 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 37px;
+        }
+        .auto-style100 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 37px;
+        }
+        .auto-style101 {
+            width: 132px;
+            background-color: #99CCFF;
+            height: 37px;
+        }
+        .auto-style102 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 37px;
+        }
+        .auto-style103 {
+            background-color: #99CCFF;
+            height: 37px;
+        }
+        .auto-style104 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 3px;
+        }
+        .auto-style105 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 3px;
+        }
+        .auto-style106 {
+            background-color: #99CCFF;
+            width: 132px;
+            height: 3px;
+        }
+        .auto-style107 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 3px;
+        }
+        .auto-style108 {
+            background-color: #99CCFF;
+            height: 3px;
+        }
+        .auto-style109 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 34px;
+        }
+        .auto-style110 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 34px;
+        }
+        .auto-style111 {
+            width: 132px;
+            background-color: #99CCFF;
+            height: 34px;
+        }
+        .auto-style112 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 34px;
+        }
+        .auto-style113 {
+            background-color: #99CCFF;
+            height: 34px;
+        }
+        .auto-style114 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 12px;
+        }
+        .auto-style115 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 12px;
+        }
+        .auto-style116 {
+            background-color: #99CCFF;
+            width: 132px;
+            height: 12px;
+        }
+        .auto-style117 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 12px;
+        }
+        .auto-style118 {
+            background-color: #99CCFF;
+            height: 12px;
+        }
+        .auto-style119 {
+            background-color: #99CCFF;
+            width: 146px;
+            height: 10px;
+        }
+        .auto-style120 {
+            background-color: #99CCFF;
+            width: 251px;
+            height: 10px;
+        }
+        .auto-style121 {
+            background-color: #99CCFF;
+            width: 132px;
+            height: 10px;
+        }
+        .auto-style122 {
+            background-color: #99CCFF;
+            width: 206px;
+            height: 10px;
+        }
+        .auto-style123 {
+            background-color: #99CCFF;
+            height: 10px;
         }
     </style>
 </asp:Content>
@@ -420,7 +612,7 @@
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">&nbsp;</td>
-                <td class="auto-style46">&nbsp;</td>
+                <td class="auto-style63">&nbsp;</td>
                 <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
             </tr>
@@ -429,7 +621,7 @@
                 <td class="auto-style33">
                     <asp:Label ID="Label12" runat="server" Font-Size="X-Large" Text="Delete a User"></asp:Label>
                 </td>
-                <td class="auto-style47"></td>
+                <td class="auto-style60"></td>
                 <td class="auto-style40">
                     <asp:Label ID="Label13" runat="server" Font-Size="Large" Text="Assign a Member to a section"></asp:Label>
                 </td>
@@ -438,7 +630,7 @@
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">&nbsp;</td>
-                <td class="auto-style46">&nbsp;</td>
+                <td class="auto-style63">&nbsp;</td>
                 <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
             </tr>
@@ -450,7 +642,7 @@
                         <asp:ListItem>Instructor</asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
-                <td class="auto-style46">&nbsp;</td>
+                <td class="auto-style63">&nbsp;</td>
                 <td class="auto-style39">
                     <asp:Label ID="Label14" runat="server" Text="Members:"></asp:Label>
                 </td>
@@ -462,9 +654,9 @@
                     <asp:DropDownList ID="DeleteDropDownList" runat="server" OnSelectedIndexChanged="DeleteDropDownList_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style46">&nbsp;</td>
+                <td class="auto-style63">&nbsp;</td>
                 <td class="auto-style39">
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="MemberAssignDropDownList" runat="server">
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style15">&nbsp;</td>
@@ -472,43 +664,152 @@
             <tr>
                 <td class="auto-style35">&nbsp;</td>
                 <td class="auto-style34">&nbsp;</td>
-                <td class="auto-style46">&nbsp;</td>
+                <td class="auto-style63">&nbsp;</td>
                 <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style41"></td>
                 <td class="auto-style42"></td>
-                <td class="auto-style48"></td>
+                <td class="auto-style61"></td>
                 <td class="auto-style44">
-                    <asp:Label ID="Label15" runat="server" Text="Session Name:"></asp:Label>
+                    <asp:Label ID="Label15" runat="server" Text="Instructor"></asp:Label>
                 </td>
                 <td class="auto-style45"></td>
             </tr>
             <tr>
-                <td class="auto-style35">&nbsp;</td>
-                <td class="auto-style34">
+                <td class="auto-style64"></td>
+                <td class="auto-style65">
                     <asp:Button ID="DeleteBtn" runat="server" CausesValidation="False" OnClick="DeleteBtn_Click" Text="Delete" Width="137px" />
                 </td>
-                <td class="auto-style46">&nbsp;</td>
-                <td class="auto-style39">
-                    <asp:DropDownList ID="DropDownList3" runat="server">
+                <td class="auto-style66"></td>
+                <td class="auto-style67">
+                    <asp:DropDownList ID="InstructorAssignDropDownList" runat="server">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style15">
-                    <asp:Button ID="AssignBtn" runat="server" CausesValidation="False" Text="Assign" Width="137px" />
+                <td class="auto-style74">
+                    <asp:Button ID="AssignBtn" runat="server" Text="Assign" Width="137px" OnClick="AssignBtn_Click" ValidationGroup="AssignGroup" />
                 </td>
             </tr>
             <tr>
-                <td class="auto-style54"></td>
-                <td class="auto-style55">
+                <td class="auto-style69"></td>
+                <td class="auto-style70">
                     <asp:Label ID="SuccessLabel" runat="server" Text="Label"></asp:Label>
                 </td>
-                <td class="auto-style56">
-                    <asp:Label ID="EELABEL" runat="server" Text="Label"></asp:Label>
+                <td class="auto-style71">
                 </td>
-                <td class="auto-style57"></td>
-                <td class="auto-style58"></td>
+                <td class="auto-style72"></td>
+                <td class="auto-style73"></td>
+            </tr>
+            <tr>
+                <td class="auto-style99"></td>
+                <td class="auto-style100">
+                </td>
+                <td class="auto-style101">
+                </td>
+                <td class="auto-style102">
+                    <asp:Label ID="SuccessLabel0" runat="server" Text="Section Name:"></asp:Label>
+                </td>
+                <td class="auto-style103"></td>
+            </tr>
+            <tr>
+                <td class="auto-style94"></td>
+                <td class="auto-style95">
+                </td>
+                <td class="auto-style96">
+                </td>
+                <td class="auto-style97">
+                    <asp:TextBox ID="SectionNameTextBox" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style98">
+                            <asp:RequiredFieldValidator ID="DateRequiredField1" runat="server" ControlToValidate="SectionNameTextBox" ErrorMessage="Enter Section Name" ForeColor="Red" ValidationGroup="AssignGroup"></asp:RequiredFieldValidator>
+                        </td>
+            </tr>
+            <tr>
+                <td class="auto-style35"></td>
+                <td class="auto-style34">
+                </td>
+                <td class="auto-style63">
+                </td>
+                <td class="auto-style39"></td>
+                <td class="auto-style15"></td>
+            </tr>
+            <tr>
+                <td class="auto-style104"></td>
+                <td class="auto-style105">
+                </td>
+                <td class="auto-style106">
+                </td>
+                <td class="auto-style107">
+                    <asp:Label ID="SuccessLabel1" runat="server" Text="Section Start Date:"></asp:Label>
+                </td>
+                <td class="auto-style108"></td>
+            </tr>
+            <tr>
+                <td class="auto-style109"></td>
+                <td class="auto-style110">
+                </td>
+                <td class="auto-style111">
+                </td>
+                <td class="auto-style112">
+                    <asp:TextBox ID="SectionDateTextBox" runat="server" TextMode="Date"></asp:TextBox>
+                </td>
+                <td class="auto-style113">
+                            <asp:RequiredFieldValidator ID="DateRequiredField0" runat="server" ControlToValidate="SectionDateTextBox" ErrorMessage="Enter Start Date" ForeColor="Red" ValidationGroup="AssignGroup"></asp:RequiredFieldValidator>
+                        </td>
+            </tr>
+            <tr>
+                <td class="auto-style119"></td>
+                <td class="auto-style120">
+                </td>
+                <td class="auto-style121">
+                </td>
+                <td class="auto-style122"></td>
+                <td class="auto-style123"></td>
+            </tr>
+            <tr>
+                <td class="auto-style114"></td>
+                <td class="auto-style115">
+                </td>
+                <td class="auto-style116">
+                </td>
+                <td class="auto-style117">
+                    <asp:Label ID="SuccessLabel2" runat="server" Text="Section Fee:"></asp:Label>
+                </td>
+                <td class="auto-style118"></td>
+            </tr>
+            <tr>
+                <td class="auto-style89"></td>
+                <td class="auto-style90">
+                </td>
+                <td class="auto-style91">
+                </td>
+                <td class="auto-style92">
+                    <asp:TextBox ID="SectionFeeTextBox" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style93">
+                            <asp:RequiredFieldValidator ID="DateRequiredField2" runat="server" ControlToValidate="SectionFeeTextBox" ErrorMessage="Enter Section Fee" ForeColor="Red" ValidationGroup="AssignGroup"></asp:RequiredFieldValidator>
+                        </td>
+            </tr>
+            <tr>
+                <td class="auto-style89">&nbsp;</td>
+                <td class="auto-style90">
+                    &nbsp;</td>
+                <td class="auto-style91">
+                    &nbsp;</td>
+                <td class="auto-style92">&nbsp;</td>
+                <td class="auto-style93">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style89">&nbsp;</td>
+                <td class="auto-style90">
+                    &nbsp;</td>
+                <td class="auto-style91">
+                    &nbsp;</td>
+                <td class="auto-style92">&nbsp;</td>
+                <td class="auto-style93">
+                    <asp:Label ID="AssignErrorLabel" runat="server"></asp:Label>
+                </td>
             </tr>
         </table>
     </p>

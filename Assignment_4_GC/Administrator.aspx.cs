@@ -60,7 +60,7 @@ namespace Assignment_4_GC
             
             if(DeleteRadioButtonList.SelectedValue == "Member")
             {
-                // LINQ, this gets the Auto types for the drop down list
+                // LINQ, this gets the Names for the drop down list
                 var result = from x in dbcon.Members select new { Name = x.MemberFirstName + " " + x.MemberLastName, x.Member_UserID };
 
                 //add the data to the drop down list and to the drop down list's data field
@@ -73,7 +73,7 @@ namespace Assignment_4_GC
             }
             else
             {
-                // LINQ, this gets the Auto types for the drop down list
+                // LINQ, this gets the Names for the drop down list
                 var result = from x in dbcon.Instructors select new { Name = x.InstructorFirstName + " " + x.InstructorLastName, x.InstructorID };
 
                 //add the data to the drop down list and to the drop down list's data field
@@ -88,6 +88,31 @@ namespace Assignment_4_GC
             
         }
 
+        public void refreshAssignDropDowns()
+        {
+            // LINQ, this gets the Names for the drop down list
+            var result = from x in dbcon.Members select new { Name = x.MemberFirstName + " " + x.MemberLastName, x.Member_UserID };
+
+            //add the data to the drop down list and to the drop down list's data field
+            MemberAssignDropDownList.DataTextField = "Name";
+            MemberAssignDropDownList.DataValueField = "Member_UserID";
+
+            //show the results in the drop down list
+            MemberAssignDropDownList.DataSource = result;
+            MemberAssignDropDownList.DataBind();
+
+            // LINQ, this gets the Names for the drop down list
+            var result2 = from x in dbcon.Instructors select new { Name = x.InstructorFirstName + " " + x.InstructorLastName, x.InstructorID };
+
+            //add the data to the drop down list and to the drop down list's data field
+            InstructorAssignDropDownList.DataTextField = "Name";
+            InstructorAssignDropDownList.DataValueField = "InstructorID";
+
+            //show the results in the drop down list
+            InstructorAssignDropDownList.DataSource = result2;
+            InstructorAssignDropDownList.DataBind();
+        }
+
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -98,6 +123,7 @@ namespace Assignment_4_GC
             if (!IsPostBack)
             {
                 refreshDeleteDropDown();
+                refreshAssignDropDowns();
             }
             
 
@@ -250,7 +276,7 @@ namespace Assignment_4_GC
             SuccessLabel.Text = "yo";
             try
             {
-                EELABEL.Text = DeleteDropDownList.SelectedItem + "   "   + DeleteDropDownList.SelectedValue;
+                
 
 
                 //sql connection object
@@ -349,6 +375,48 @@ namespace Assignment_4_GC
         protected void DeleteDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void AssignBtn_Click(object sender, EventArgs e)
+        {
+            string sectionName = SectionNameTextBox.Text.Trim();
+            DateTime sectionDate = DateTime.Parse(SectionDateTextBox.Text);
+            string memberID = MemberAssignDropDownList.SelectedValue.ToString();
+            string instructorID = InstructorAssignDropDownList.SelectedValue.ToString();
+            string sectionFee = SectionFeeTextBox.Text.Trim();
+
+            
+
+
+            try
+            {
+                //sql connection object 
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    //connects to the database
+                    dbcon = new KarateSchoolDataContext(connString);
+
+                    //query to insert the user in NetUser table
+                    string insertQuery = "INSERT INTO Section(SectionName, SectionStartDate, Member_ID, Instructor_ID, SectionFee)" +
+                        " VALUES('" + sectionName + "', '" + sectionDate + "', " + memberID + ", " + instructorID + ", " + sectionFee + ")";
+
+                    // open connection
+                    conn.Open();
+
+                    //connect query
+                    SqlCommand sqlcom = new SqlCommand(insertQuery, conn);
+
+
+                    //execute query
+                    sqlcom.ExecuteNonQuery();
+
+                    AssignErrorLabel.Text = "";
+                }
+            }
+            catch (SqlException ex)
+            {
+                AssignErrorLabel.Text = ("Exception: " + ex.Message);
+            }
         }
     }
     

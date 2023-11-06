@@ -330,13 +330,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.DropDownList DeleteDropDownList;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// MemberAssignDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList MemberAssignDropDownList;
 
         /// <summary>
         /// Label15 control.
@@ -357,13 +357,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Button DeleteBtn;
 
         /// <summary>
-        /// DropDownList3 control.
+        /// InstructorAssignDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList InstructorAssignDropDownList;
 
         /// <summary>
         /// AssignBtn control.
@@ -384,12 +384,93 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Label SuccessLabel;
 
         /// <summary>
-        /// EELABEL control.
+        /// SuccessLabel0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EELABEL;
+        protected global::System.Web.UI.WebControls.Label SuccessLabel0;
+
+        /// <summary>
+        /// SectionNameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SectionNameTextBox;
+
+        /// <summary>
+        /// DateRequiredField1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DateRequiredField1;
+
+        /// <summary>
+        /// SuccessLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SuccessLabel1;
+
+        /// <summary>
+        /// SectionDateTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SectionDateTextBox;
+
+        /// <summary>
+        /// DateRequiredField0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DateRequiredField0;
+
+        /// <summary>
+        /// SuccessLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SuccessLabel2;
+
+        /// <summary>
+        /// SectionFeeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SectionFeeTextBox;
+
+        /// <summary>
+        /// DateRequiredField2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DateRequiredField2;
+
+        /// <summary>
+        /// AssignErrorLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AssignErrorLabel;
     }
 }
