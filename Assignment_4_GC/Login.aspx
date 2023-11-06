@@ -141,7 +141,7 @@
                             <asp:Label ID="Label5" runat="server" Text="Password:"></asp:Label>
                         </td>
                         <td class="auto-style18">
-                            <asp:TextBox ID="PasswordTextBox" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
                         </td>
                         <td>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PasswordTextBox" ErrorMessage="EnterPassword" ForeColor="Red"></asp:RequiredFieldValidator>
