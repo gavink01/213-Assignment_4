@@ -105,6 +105,9 @@
   <ItemGroup>
     <Content Include="Administrator.aspx" />
     <Content Include="App_Data\KarateSchool.mdf" />
+    <Content Include="App_Data\KarateSchool_log.ldf">
+      <DependentUpon>KarateSchool.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />

@@ -306,9 +306,12 @@ namespace Assignment_4_GC
 
 
                         //execute the query
-                        sqlcom3.ExecuteNonQuery();
+                        //Has to be in this order so the FK does not have conflicts
                         sqlcom2.ExecuteNonQuery();
+                        sqlcom3.ExecuteNonQuery();
                         sqlcom.ExecuteNonQuery();
+                        
+                        
                         
                         
                     }
