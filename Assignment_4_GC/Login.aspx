@@ -169,7 +169,10 @@
         </tr>
         <tr>
             <td class="auto-style7"></td>
-            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style10">
+                <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
+                </asp:Login>
+            </td>
             <td class="auto-style2"></td>
         </tr>
     </table>
