@@ -116,6 +116,9 @@ namespace Assignment_4_GC
                     //Adds the user ID, so we can grab data from the database after the webpage changes
                     Session.Add("UserID", UserDetails.userID);
 
+                    //Athenticates user
+                    FormsAuthentication.SetAuthCookie(Login1.UserName, true);
+
                     //This determines which webpage the user will be taken to
                     switch (userType)
                     {
