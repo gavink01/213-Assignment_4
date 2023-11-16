@@ -129,8 +129,11 @@ namespace Assignment_4_GC
                 refreshDeleteDropDown();
                 refreshAssignDropDowns();
             }
-            
 
+            //hide the error buttons
+            SuccessLabel.Visible = false;
+            ErrorLabel.Visible = false;
+            
             
         }
 
@@ -276,8 +279,7 @@ namespace Assignment_4_GC
 
         protected void DeleteBtn_Click(object sender, EventArgs e)
         {
-            SuccessLabel.Visible = true;
-            SuccessLabel.Text = "yo";
+            
             try
             {
                 
@@ -340,10 +342,11 @@ namespace Assignment_4_GC
                         sqlcom2.ExecuteNonQuery();
                         sqlcom3.ExecuteNonQuery();
                         sqlcom.ExecuteNonQuery();
+
                         
-                        
-                        
-                        
+                       
+
+
                     }
                     catch (SqlException ex)
                     {
