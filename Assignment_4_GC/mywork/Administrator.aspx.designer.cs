@@ -402,13 +402,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
-        /// SectionNameTextBox control.
+        /// SectionNameRadioButtonList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SectionNameTextBox;
+        protected global::System.Web.UI.WebControls.RadioButtonList SectionNameRadioButtonList;
 
         /// <summary>
         /// DateRequiredField1 control.

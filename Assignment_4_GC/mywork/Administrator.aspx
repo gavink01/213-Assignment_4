@@ -721,10 +721,13 @@
                 <td class="auto-style96">
                 </td>
                 <td class="auto-style97">
-                    <asp:TextBox ID="SectionNameTextBox" runat="server"></asp:TextBox>
+                    <asp:RadioButtonList ID="SectionNameRadioButtonList" runat="server">
+                        <asp:ListItem>Karate Age-Uke</asp:ListItem>
+                        <asp:ListItem>Karate Chudan-Uke</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
                 <td class="auto-style98">
-                            <asp:RequiredFieldValidator ID="DateRequiredField1" runat="server" ControlToValidate="SectionNameTextBox" ErrorMessage="Enter Section Name" ForeColor="Red" ValidationGroup="AssignGroup"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="DateRequiredField1" runat="server" ControlToValidate="SectionNameRadioButtonList" ErrorMessage="Select Section Name" ForeColor="Red" ValidationGroup="AssignGroup"></asp:RequiredFieldValidator>
                         </td>
             </tr>
             <tr>
