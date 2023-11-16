@@ -24,6 +24,15 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
+        /// LoginStatus1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus1;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -384,13 +393,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.Label SuccessLabel;
 
         /// <summary>
-        /// SuccessLabel0 control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SuccessLabel0;
+        protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
         /// SectionNameTextBox control.
@@ -411,13 +420,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.RequiredFieldValidator DateRequiredField1;
 
         /// <summary>
-        /// SuccessLabel1 control.
+        /// Label20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SuccessLabel1;
+        protected global::System.Web.UI.WebControls.Label Label20;
 
         /// <summary>
         /// SectionDateTextBox control.
@@ -438,13 +447,13 @@ namespace Assignment_4_GC
         protected global::System.Web.UI.WebControls.RequiredFieldValidator DateRequiredField0;
 
         /// <summary>
-        /// SuccessLabel2 control.
+        /// Label21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SuccessLabel2;
+        protected global::System.Web.UI.WebControls.Label Label21;
 
         /// <summary>
         /// SectionFeeTextBox control.

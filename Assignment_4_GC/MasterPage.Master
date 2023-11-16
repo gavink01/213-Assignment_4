@@ -27,7 +27,7 @@
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-         <a class="nav-link" href="Login.aspx">Login</a>
+         <a class="nav-link" href="../Logon.aspx">Login</a>
        </li>
       
        
@@ -44,5 +44,12 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+
+    <footer>
+
+               Assignment 4
+
+    </footer>
+
 </body>
 </html>

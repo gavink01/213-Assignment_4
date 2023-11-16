@@ -4,10 +4,15 @@
         .auto-style1 {
             background-color: #99CCFF;
         }
+    .auto-style2 {
+        font-size: large;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="auto-style1"><strong>Instructor Page</strong></h1>
+    <h1 class="auto-style1"><strong>Instructor Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="auto-style2" />
+    </strong></h1>
     <h2>Welcome
         <asp:Label ID="lblInstructorName" runat="server" Text="Instructor Name"></asp:Label>
     </h2>

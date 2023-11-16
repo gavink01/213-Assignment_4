@@ -11,10 +11,15 @@
         .auto-style4 {
             background-color: #99CCFF;
         }
+    .auto-style5 {
+        font-size: large;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="auto-style4"><strong>Member Page</strong></h1>
+    <h1 class="auto-style4"><strong>Member Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="auto-style5" />
+    </strong></h1>
     <h1>Welcome
         <asp:Label ID="lblMemberName" runat="server" Text="Member Name"></asp:Label>
     </h1>

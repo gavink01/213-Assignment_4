@@ -433,7 +433,9 @@
             <td class="auto-style14">
                 <asp:Label ID="Label3" runat="server" Font-Size="XX-Large" Text="Administrator Page"></asp:Label>
             </td>
-            <td class="auto-style12">&nbsp;</td>
+            <td class="auto-style12">
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style13">&nbsp;</td>
@@ -443,7 +445,7 @@
     </table>
     <table class="auto-style2">
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style8"></td>
             <td class="auto-style9">
                 <asp:Label ID="Label1" runat="server" Text="Member's Information"></asp:Label>
             </td>
@@ -708,7 +710,7 @@
                 <td class="auto-style101">
                 </td>
                 <td class="auto-style102">
-                    <asp:Label ID="SuccessLabel0" runat="server" Text="Section Name:"></asp:Label>
+                    <asp:Label ID="Label11" runat="server" Text="Section Name:"></asp:Label>
                 </td>
                 <td class="auto-style103"></td>
             </tr>
@@ -741,7 +743,7 @@
                 <td class="auto-style106">
                 </td>
                 <td class="auto-style107">
-                    <asp:Label ID="SuccessLabel1" runat="server" Text="Section Start Date:"></asp:Label>
+                    <asp:Label ID="Label20" runat="server" Text="Section Start Date:"></asp:Label>
                 </td>
                 <td class="auto-style108"></td>
             </tr>
@@ -774,7 +776,7 @@
                 <td class="auto-style116">
                 </td>
                 <td class="auto-style117">
-                    <asp:Label ID="SuccessLabel2" runat="server" Text="Section Fee:"></asp:Label>
+                    <asp:Label ID="Label21" runat="server" Text="Section Fee:"></asp:Label>
                 </td>
                 <td class="auto-style118"></td>
             </tr>
