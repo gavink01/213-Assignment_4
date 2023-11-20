@@ -18,7 +18,7 @@ namespace Assignment_4_GC
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ErrorLabel.Visible = false;
         }
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
@@ -36,6 +36,7 @@ namespace Assignment_4_GC
                 //If password and username dont match, then show an error
                 if (selectedUser == null)
                 {
+                    //This is just for testing
                     //Show the error to the user
                     ErrorLabel.Text = "Invalid UserName or Password";
                 }
@@ -69,6 +70,7 @@ namespace Assignment_4_GC
             }
             catch (Exception ex)
             {
+                //This is just for testing
                 //Show the error to the user
                 ErrorLabel.Text = ("Exception: " + ex.Message);
             }
