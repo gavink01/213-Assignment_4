@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -10,32 +11,23 @@ namespace Assignment_4_GC
 {
     public partial class Login : System.Web.UI.Page
     {
+        
+        //connection string
+        string connString = ConfigurationManager.ConnectionStrings["KarateSchoolConnectionString"].ConnectionString;
         KarateSchoolDataContext dbcon;
 
-        //HOW WILL THE CONNECTION STRING WORK ON MULTIPLE COMPUTERS?
-
-        //connection string
-        //Collins conn
-        //string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\colin\\Desktop\\Assignment_4GC\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
-        // Gavins conn
-        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\gavin\\OneDrive - North Dakota University System\\Desktop\\Repo\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf\";Integrated Security=True;Connect Timeout=30";
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-     
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
             //access the dbml
             dbcon = new KarateSchoolDataContext(connString);
 
-
             try
             {
-
-
                 //Query to match the UserName and Password with something from the NetUser tables
                 var selectedUser = (from x in dbcon.NetUsers
                                     where x.UserName == Login1.UserName && x.UserPassword == Login1.Password
@@ -73,15 +65,10 @@ namespace Assignment_4_GC
                             break;
 
                     }
-
-
-
                 }
             }
             catch (Exception ex)
             {
-
-
                 //Show the error to the user
                 ErrorLabel.Text = ("Exception: " + ex.Message);
             }

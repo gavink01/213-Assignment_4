@@ -43,6 +43,11 @@
                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" Text="Total Cost:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="lblTotalCost" runat="server" Font-Size="Large" Text="total"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                    <br />
                 </td>
             </tr>
         </table>

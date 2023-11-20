@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,12 +12,8 @@ namespace Assignment_4_GC
 {
     public partial class Administrator : System.Web.UI.Page
     {
-        // Gavins conn
-        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\gavin\\OneDrive - North Dakota University System\\Desktop\\Repo\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf\";Integrated Security=True;Connect Timeout=30";
-
         //connection string
-        //Colin's conn
-        //string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\colin\\Desktop\\Assignment_4GC\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
+        string connString = ConfigurationManager.ConnectionStrings["KarateSchoolConnectionString"].ConnectionString;
         KarateSchoolDataContext dbcon;
 
 
@@ -42,27 +39,23 @@ namespace Assignment_4_GC
 
             //query to display needed items in Instructors to the gridview
             var result2 = from x in dbcon.Instructors
-                         select new
-                         {
-                             x.InstructorFirstName,
-                             x.InstructorLastName,
-                             
-                         };
+                          select new
+                          {
+                              x.InstructorFirstName,
+                              x.InstructorLastName,
+
+                          };
 
             //show result
             GridView2.DataSource = result2;
             GridView2.DataBind();
-
-
-
-
         }
 
 
         public void refreshDeleteDropDown()
         {
-            
-            if(DeleteRadioButtonList.SelectedValue == "Member")
+
+            if (DeleteRadioButtonList.SelectedValue == "Member")
             {
                 // LINQ, this gets the Names for the drop down list
                 var result = from x in dbcon.Members select new { Name = x.MemberFirstName + " " + x.MemberLastName, x.Member_UserID };
@@ -88,8 +81,8 @@ namespace Assignment_4_GC
                 DeleteDropDownList.DataSource = result;
                 DeleteDropDownList.DataBind();
             }
-                
-            
+
+
         }
 
         public void refreshAssignDropDowns()
@@ -133,14 +126,14 @@ namespace Assignment_4_GC
             //hide the error buttons
             SuccessLabel.Visible = false;
             ErrorLabel.Visible = false;
-            
-            
+
+
         }
 
         //This just changes what the user sees based on if the user picks Member or Instructor
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(RadioButtonList1.SelectedIndex == 0)
+            if (RadioButtonList1.SelectedIndex == 0)
             {
                 DateJoinedTextBox.Visible = true;
                 DateJoinedLabel.Visible = true;
@@ -149,7 +142,7 @@ namespace Assignment_4_GC
                 DateRequiredField.Visible = true;
                 EmailRequiredField.Visible = true;
             }
-            else 
+            else
             {
                 DateJoinedTextBox.Visible = false;
                 DateJoinedLabel.Visible = false;
@@ -173,7 +166,7 @@ namespace Assignment_4_GC
             string email;
             DateTime dateJoined;
 
-            
+
 
             try
             {
@@ -205,7 +198,7 @@ namespace Assignment_4_GC
                                         select x).First();
 
 
-                    
+
                     //different query if the user is a member
                     if (userType == "Member")
                     {
@@ -227,7 +220,7 @@ namespace Assignment_4_GC
                     }
                     else
                     {
-                        
+
 
                         //query to insert the user in  table instructor
                         string insertQuery2 = "INSERT INTO Instructor(InstructorID, InstructorFirstName, InstructorLastName, InstructorPhoneNumber)" +
@@ -273,16 +266,16 @@ namespace Assignment_4_GC
 
         protected void DeleteRadioButtonList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             refreshDeleteDropDown();
         }
 
         protected void DeleteBtn_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                
+
 
 
                 //sql connection object
@@ -293,12 +286,12 @@ namespace Assignment_4_GC
                     string deleteQuery = "DELETE from NetUser WHERE UserID=" + DeleteDropDownList.SelectedValue + "";
 
                     //second query for deleting any users in Section tabel
-                    string deleteQuery2; 
+                    string deleteQuery2;
 
                     //third delete query for Member or Instructor tabels
                     string deleteQuery3;
 
-                    
+
 
 
 
@@ -343,8 +336,8 @@ namespace Assignment_4_GC
                         sqlcom3.ExecuteNonQuery();
                         sqlcom.ExecuteNonQuery();
 
-                        
-                       
+
+
 
 
                     }
@@ -371,12 +364,12 @@ namespace Assignment_4_GC
 
             //EELABEL.Text = DeleteDropDownList.SelectedItem + "   "   + DeleteDropDownList.SelectedValue;
 
-            
-            
+
+
             //refresh the data
             refreshPage();
             refreshDeleteDropDown();
-            
+
         }
 
         protected void DeleteDropDownList_SelectedIndexChanged(object sender, EventArgs e)
@@ -392,7 +385,7 @@ namespace Assignment_4_GC
             string instructorID = InstructorAssignDropDownList.SelectedValue.ToString();
             string sectionFee = SectionFeeTextBox.Text.Trim();
 
-            
+
 
 
             try
@@ -426,5 +419,5 @@ namespace Assignment_4_GC
             }
         }
     }
-    
+
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,10 +12,8 @@ namespace Assignment_4_GC
     public partial class Member : System.Web.UI.Page
     {
         //connection string
-        //Collins conn
-        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\colin\\Desktop\\Assignment_4GC\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
-        // Gavins conn
-        //string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\gavin\\OneDrive - North Dakota University System\\Desktop\\Repo\\213-Assignment_4\\Assignment_4_GC\\App_Data\\KarateSchool.mdf\";Integrated Security=True;Connect Timeout=30";
+        string connString = ConfigurationManager.ConnectionStrings["KarateSchoolConnectionString"].ConnectionString;
+        
         KarateSchoolDataContext dbcon;
         int userId = UserDetails.userID;
         protected void Page_Load(object sender, EventArgs e)
@@ -38,7 +37,6 @@ namespace Assignment_4_GC
                 string lastName = selectedMemberID.MemberLastName;
                 lblMemberName.Text = firstName + " " + lastName;
             }
-
         }
 
         // Fetches all the records and displays in the gridview
@@ -47,17 +45,11 @@ namespace Assignment_4_GC
             dbcon = new KarateSchoolDataContext(connString);
 
             // Query that will join together the other tables so that data can be used from each table
-            var records = from member in dbcon.Members
-                          join section in dbcon.Sections on member.Member_UserID equals section.Member_ID
+            var records = from section in dbcon.Sections
                           join instructor in dbcon.Instructors on section.Instructor_ID equals instructor.InstructorID
-                          where member.Member_UserID == userId
+                          where section.Member.Member_UserID == userId
                           select new
                           {
-                              member.MemberFirstName,
-                              member.MemberLastName,
-                              member.MemberDateJoined,
-                              member.MemberPhoneNumber,
-                              member.MemberEmail,
                               section.SectionName,
                               instructor.InstructorFirstName,
                               instructor.InstructorLastName,
@@ -67,6 +59,10 @@ namespace Assignment_4_GC
 
             GridView1.DataSource = records;
             GridView1.DataBind();
+
+            //Gets the total cost of all the members sections
+            decimal totalCost = records.Sum(x => x.SectionFee);
+            lblTotalCost.Text = totalCost.ToString("C");
         }
     }
 }
